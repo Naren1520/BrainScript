@@ -20,7 +20,7 @@ import Contact from "./pages/Contact/Contact";
 
 import About from "./pages/About/About";
 
-const BASE_URL = "";
+const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
 export default function App() {
   const { isAuthenticated } = useAuth();

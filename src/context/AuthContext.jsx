@@ -13,7 +13,7 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
 
   // Use relative path for proxying
-  const BASE_URL = "";
+  const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
   // 🔹 Fetch user on mount
   useEffect(() => {
